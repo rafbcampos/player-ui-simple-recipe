@@ -8,7 +8,7 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "gen:asset": "plop --plopfile ./scripts/plopfile.mjs asset",
-    "compile:dsl": "sh ./scripts/compile-dsl.sh"
+    "compile:dsl": "player dsl compile -i ./src/content/index.ts -o ./src/generated --skip-validation"
   },
   "dependencies": {
     "@player-tools/dsl": "^0.6.0",

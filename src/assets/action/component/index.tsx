@@ -1,9 +1,8 @@
-import React from "react";
 import type { TransformedAction } from "../types";
 import { ReactAsset } from "@player-ui/react";
 
 const buttonStyle: React.CSSProperties = {
-  backgroundColor: "#4CAF50" /* Green */,
+  backgroundColor: "#855ca8",
   border: "none",
   color: "white",
   padding: "15px 32px",
@@ -12,6 +11,8 @@ const buttonStyle: React.CSSProperties = {
   display: "inline-block",
   fontSize: "16px",
   margin: "4px 2px",
+  borderRadius: "8px",
+  cursor: "pointer",
 };
 
 const useActionPros = (props: TransformedAction) => {

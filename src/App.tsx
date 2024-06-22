@@ -1,6 +1,7 @@
 import { type ReactPlayerOptions, useReactPlayer } from "@player-ui/react";
 import { AssetsRegistryPlugin } from "./assets";
 import { Suspense, useEffect } from "react";
+import flow from "./generated/index.json";
 
 const config: ReactPlayerOptions = {
   plugins: [new AssetsRegistryPlugin()],
@@ -10,7 +11,7 @@ function App() {
   const { reactPlayer } = useReactPlayer(config);
 
   useEffect(() => {
-    reactPlayer.start({} as any);
+    reactPlayer.start(flow as any);
   }, [reactPlayer]);
 
   return (

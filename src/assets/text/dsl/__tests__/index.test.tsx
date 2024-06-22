@@ -1,3 +1,4 @@
+import React from "react";
 import { describe, expect, test } from "vitest";
 import { render } from "@player-tools/dsl";
 import { Text } from "../";

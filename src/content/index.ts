@@ -9,9 +9,11 @@ export default {
   navigation,
   schema,
   data: {
-    name: "",
-    age: 0,
-    phone: "",
-    city: "",
+    userData: {
+      name: "",
+      age: 0,
+      phone: "",
+      city: "",
+    },
   },
 };

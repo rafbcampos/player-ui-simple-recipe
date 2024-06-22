@@ -1,4 +1,3 @@
-import React from "react";
 import { ReactAsset } from "@player-ui/react";
 import type { StackedViewAsset } from "../types";
 

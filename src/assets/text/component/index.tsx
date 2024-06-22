@@ -1,4 +1,3 @@
-import React from "react";
 import type { TextAsset } from "../types";
 import { createElement } from "react";
 
@@ -20,7 +19,7 @@ export const TextComponent = ({
 }: TextAsset) => {
   const styles: React.CSSProperties = {
     fontSize: sizesEM[size || "md"],
-    color: color || "black",
+    color: color || "inherit",
     fontFamily: fontFamily || "sans-serif",
     fontWeight: fontWeight || "normal",
   };

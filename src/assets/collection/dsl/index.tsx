@@ -1,3 +1,4 @@
+import React from "react";
 import { AssetPropsWithChildren, Asset, createSlot } from "@player-tools/dsl";
 import type { Asset as AssetType } from "@player-ui/player";
 import { CollectionAsset } from "../types";

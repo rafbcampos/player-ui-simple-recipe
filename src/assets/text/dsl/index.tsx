@@ -1,3 +1,4 @@
+import React from "react";
 import { AssetPropsWithChildren, Asset } from "@player-tools/dsl";
 import type { TextAsset } from "../types";
 
