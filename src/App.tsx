@@ -1,4 +1,8 @@
-import { type ReactPlayerOptions, useReactPlayer } from "@player-ui/react";
+import {
+  Flow,
+  type ReactPlayerOptions,
+  useReactPlayer,
+} from "@player-ui/react";
 import { AssetsRegistryPlugin } from "./assets";
 import { Suspense, useEffect } from "react";
 import flow from "./generated/index.json";
@@ -11,7 +15,8 @@ function App() {
   const { reactPlayer } = useReactPlayer(config);
 
   useEffect(() => {
-    reactPlayer.start(flow as any);
+    // casting due to an issue with schema not generating the ROOT type:
+    reactPlayer.start(flow as unknown as Flow);
   }, [reactPlayer]);
 
   return (

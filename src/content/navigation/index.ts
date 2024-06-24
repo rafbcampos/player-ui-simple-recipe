@@ -1,5 +1,11 @@
 import { VIEWS_IDS } from "../../constants";
 
+// This file uses the VIEWS_IDS to generate Flow navigation and transitions between Views.
+// This can be a starting point, but feel free to customize as needed. For more information,
+// visit https://player-ui.github.io/latest/content/navigation#navigation.
+
+// TODO: check if the VIEWS_IDS are correct and adjust the transitions if necessary
+
 const transitions = Object.entries(VIEWS_IDS).reduce(
   (acc, [key, value]) => ({
     ...acc,

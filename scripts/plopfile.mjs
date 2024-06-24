@@ -35,25 +35,25 @@ const extendedActions = {
     path: join(basePath, "../src/assets/index.ts"),
     pattern: /(.|\n)+(import.*from "@.*)/,
     template:
-      'import { {{pascalCase assetName}}Asset, {{pascalCase assetName}}Component, {{camelCase assetName}}Transform } from "./{{kebabCase assetName}}";',
+      'import { {{pascalCase assetName}}Asset, {{pascalCase assetName}}Component, {{camelCase assetName}}Transform } from "./{{kebabCase assetName}}";\n',
   },
   pluginTransform: {
     type: "append",
     path: join(basePath, "../src/assets/index.ts"),
-    pattern: /Add your transforms here/,
-    template: `        [{type: "{{kebabCase assetName}}" }, {{camelCase assetName}}Transform],`,
+    pattern: /Add your transforms here\n/,
+    template: `        [{type: "{{kebabCase assetName}}" }, {{camelCase assetName}}Transform],\n`,
   },
   pluginAssetType: {
     type: "append",
     path: join(basePath, "../src/assets/index.ts"),
-    pattern: /Add your components type here/,
-    template: "        {{pascalCase assetName}}Asset,",
+    pattern: /Add your component types here\n/,
+    template: "        {{pascalCase assetName}}Asset,\n",
   },
   pluginAsset: {
     type: "append",
     path: join(basePath, "../src/assets/index.ts"),
-    pattern: /Add your assets here/,
+    pattern: /Add your assets here\n/,
     template:
-      "        [{{kebabCase assetName}}, {{pascalCase assetName}}Component]",
+      "        [{{kebabCase assetName}}, {{pascalCase assetName}}Component]\n",
   },
 };

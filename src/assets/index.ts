@@ -29,15 +29,12 @@ class TransformsPlugin implements PlayerPlugin {
   }
 }
 
-// Register your assets here:
-// for more information about assets, see the documentation
-// https://player-ui.github.io/latest/content/assets-views#assets
 export class AssetsRegistryPlugin
   implements
     ReactPlayerPlugin,
     ExtendedPlayerPlugin<
       [
-        // Add your components type here
+        // Add your component types here
         InputAsset,
         StackedViewAsset,
         ActionAsset,
@@ -48,6 +45,9 @@ export class AssetsRegistryPlugin
 {
   name = "assets-plugin";
 
+  // Register your assets here:
+  // for more information about assets, see the documentation
+  // https://player-ui.github.io/latest/content/assets-views#assets
   applyReact(reactPlayer: ReactPlayer) {
     reactPlayer.registerPlugin(
       new AssetProviderPlugin([
